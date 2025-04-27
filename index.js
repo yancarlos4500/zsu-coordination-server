@@ -192,8 +192,7 @@ const fetchVatsimData = async () => {
       const now = new Date();
       const centerEstimateDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), centerHour, centerMin));
       const diffMin = (centerEstimateDate - now) / 1000 / 60;
-console.log(isNaN(diffMin));
-      if (diffMin > 45 && !isNaN(diffMin)) {
+      if (diffMin > 45 || isNaN(diffMin)) {
         return false;   // Muted color for aircraft with estimate older than 30 minutes
       } 
 
