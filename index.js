@@ -175,7 +175,7 @@ const fetchVatsimData = async () => {
                     console.log(match);
                     
                     if (!match) return;
-                    type = 1;
+                    type = 2;
                   }
                   
                 }
