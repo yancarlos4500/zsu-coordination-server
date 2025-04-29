@@ -133,45 +133,45 @@ async function fetchVatsimData() {
   try {
     const res = await axios.get('https://data.vatsim.net/v3/vatsim-data.json');
     const { pilots } = res.data;
-// === Inject 4 Real JFK-Caribbean Flights (split 2 ZWY + 2 ZSU) ===
-pilots.push(
-  {
-    cid: 990013,
-    callsign: "TST_JFK_SJU",
-    flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM", arrival: "TJSJ" },
-    latitude: 24.8, // ZWY (north of ZSU boundary)
-    longitude: -66.5,
-    heading: 180,
-    groundspeed: 450
-  },
-  {
-    cid: 990014,
-    callsign: "TST_JFK_SXM",
-    flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM A636 STT", arrival: "TNCM" },
-    latitude: 18.7, // ZSU (south of SAVIK)
-    longitude: -63.5,
-    heading: 180,
-    groundspeed: 450
-  },
-  {
-    cid: 990015,
-    callsign: "TST_JFK_BGI",
-    flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM UA555 ILURI", arrival: "TBPB" },
-    latitude: 18.5, // ZSU (south of SAVIK)
-    longitude: -63.2,
-    heading: 180,
-    groundspeed: 440
-  },
-  {
-    cid: 990016,
-    callsign: "TST_JFK_ANU",
-    flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM UA552 TAPA", arrival: "TAPA" },
-    latitude: 18.7, // ZSU (south of SAVIK)
-    longitude: -63.5,
-    heading: 180,
-    groundspeed: 440
-  }
-);
+// // === Inject 4 Real JFK-Caribbean Flights (split 2 ZWY + 2 ZSU) ===
+// pilots.push(
+//   {
+//     cid: 990013,
+//     callsign: "TST_JFK_SJU",
+//     flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM", arrival: "TJSJ" },
+//     latitude: 24.8, // ZWY (north of ZSU boundary)
+//     longitude: -66.5,
+//     heading: 180,
+//     groundspeed: 450
+//   },
+//   {
+//     cid: 990014,
+//     callsign: "TST_JFK_SXM",
+//     flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM A636 STT", arrival: "TNCM" },
+//     latitude: 18.7, // ZSU (south of SAVIK)
+//     longitude: -63.5,
+//     heading: 180,
+//     groundspeed: 450
+//   },
+//   {
+//     cid: 990015,
+//     callsign: "TST_JFK_BGI",
+//     flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM UA555 ILURI", arrival: "TBPB" },
+//     latitude: 18.5, // ZSU (south of SAVIK)
+//     longitude: -63.2,
+//     heading: 180,
+//     groundspeed: 440
+//   },
+//   {
+//     cid: 990016,
+//     callsign: "TST_JFK_ANU",
+//     flight_plan: { route: "CAMRN Y495 SAVIK L459 DARUX L456 THANK A638 PJM UA552 TAPA", arrival: "TAPA" },
+//     latitude: 18.7, // ZSU (south of SAVIK)
+//     longitude: -63.5,
+//     heading: 180,
+//     groundspeed: 440
+//   }
+// );
 
 
 
